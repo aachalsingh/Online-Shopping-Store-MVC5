@@ -1,0 +1,86 @@
+
+**SUMMARY 
+
+**PART 1 : Setting up project and related tool 
+
+**PART 2 : Adding the necessary project and packages**
+1. Empty console file 
+2. Added 2 files 
+3. one, .domain (class library) && another, .webui (mvc template)
+4. Adding reference of nuget package , mof  and E.F in .domain file, ninject
+5. Downloading Niject in high dependency , for the file . 
+
+**PART 3 : Adding related class , interface and repository 
+
+1. In domain , added entities folder
+2. Added a product class in entities 
+3. Inside the product class are properties 
+4. Add another folder : Abstract in domain 
+5. Create an interface in it. 
+6. Inside the interface , creating a method which contains a PRODUCT(S) object calling Product class with all the property read only; get
+7. Now creating a controller and creating ViewResult to render view
+8. Using ninject for dependancy injection 
+9. Adding dependancy in ninject file. 
+10. Creating a moq ; mock method and giving certain list of values
+11. Binding the mocking object to the repository. 
+12. Create private read-only repository with a method including public repo 
+13. Generate a model for view result
+
+**PART 4 : Create db , table ; dsiplay data using ef 
+
+1. Creating a new db named online shopping store. 
+2. Creating a table ; Prodcuts including all the property mentioned in Prodcut entities
+3. Adding the connection string to visual studio 
+4. Adding folder - Concrete to .domain . Including dbcontext file and product repository file i.e it contains constructor for db context 
+5. Adding class in it by inheriting interface property with read only IEnumerate
+6. Adding another class with same name of db connection string 
+7. EFDB context is not injected in the web config file and is binded with IProduct interface. 
+8. The unnecessary styling is removed from layout page. 
+
+**PART 5 : Pagination 
+
+1. Now breaking down home page into several pages. Because database's data are retrieved in the same one page only. 
+2. In the home controller, giving the logic for page division. By inserting linq queries to sort according to id and dividing the pages by page-1 by initializing page = 1 at first.
+3. Applying extension method : folder : HTML helper > Paginghelper.cs file 
+4. Creating a new model and bringing the property of Interface and Paging Info
+5. Setting up the model directly to the view. 
+6. Giving the routes in route config for the pages
+
+**PART 6 : Styling the content / Bootstrap ; simple 
+1. Nuget - Bootstrap 
+2. Added styling in common layout. cshtml 
+3. As well as in List. cshtml
+
+**PART 7 : Partial View 
+1. Adding partial view for the shared context for design in list view .
+2. And calling the partial view in the list view. 
+
+**PART 8 : Adding navigation controls (MENU)
+1. Adding the category clause in controller 
+2. Calling it from products class
+3. As well as listing new cat in model. 
+4. Configuring everything in web API route , all the page , product list, category. 
+5. Now, creating a category column in left side which retrieves all the data from db and shows. 
+6. Creating new , navController , giving the name via view. Then rendering the db value using the interface method by calling it and applying LINQ. 
+7. Create the partial view for menu, give the necessary action links and css within it. 
+8. Now adding the route link as well
+
+**PART 9 : Building shopping cart 
+1. Going to domain > entities > adding a cart class. 
+2. Create another class > cartLine
+3. Now, I am giving properties to cartline, product and quantity
+4. Giving all the necessary , additems, het items, clear cart on cart.cs file
+5. Creating a cart controller
+6. Creating model and view accordingly. 
+**PART 10 : Complete shopping cart 
+1. Making quantity +1+2 in same lines. 
+2. Add Binders Folder for the application > Creating the session for the cart in class
+3. For empty cart as well as with items with IModelBinder
+4. In index view , creating remove from cart
+**PART 11 : Mobile 
+
+**PART 12 : APPILCATION 
+
+**PART 13: Security
+
+**PART 14: Deployment 
